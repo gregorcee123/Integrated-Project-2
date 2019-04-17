@@ -76,7 +76,7 @@ echo'<li><a href="login.php" class="three">Login</a></li>';
                 
                 <h3>- Category General</h3><br />
                <?php
-                    $sql6 = "SELECT U.username, C.CategoryName, US.score FROM users U INNER JOIN userscore US ON U.id = US.UserID INNER JOIN categories C ON US.CategoryID = C.CategoryID WHERE US.CategoryID = 1 GROUP BY US.scoreID";
+                    $sql6 = "SELECT U.username, C.CategoryName, US.score FROM users U INNER JOIN userscore US ON U.id = US.UserID INNER JOIN categories C ON US.CategoryID = C.CategoryID WHERE US.CategoryID = 1 GROUP BY US.scoreID ORDER BY score DESC";
 
   $result = $conn->query($sql6);
     echo "<table border='1'><tr><th>Username</th><th>Category</th><th>Score</th></tr>";
@@ -94,7 +94,7 @@ echo "</table>";
                 <br /><br />
                  <h3>- Category Sport</h3><br />
                <?php
-                    $sql7 = "SELECT U.username, C.CategoryName, US.score FROM users U INNER JOIN userscore US ON U.id = US.UserID INNER JOIN categories C ON US.CategoryID = C.CategoryID WHERE US.CategoryID = 2 GROUP BY US.scoreID";
+                    $sql7 = "SELECT U.username, C.CategoryName, US.score FROM users U INNER JOIN userscore US ON U.id = US.UserID INNER JOIN categories C ON US.CategoryID = C.CategoryID WHERE US.CategoryID = 2 GROUP BY US.scoreID ORDER BY score DESC";
 
   $result = $conn->query($sql7);
     echo "<table border='1'><tr><th>Username</th><th>Category</th><th>Score</th></tr>";
@@ -112,7 +112,7 @@ echo "</table>";
                 <br /><br />
                  <h3>- Category Music</h3><br />
                <?php
-                    $sql8 = "SELECT U.username, C.CategoryName, US.score FROM users U INNER JOIN userscore US ON U.id = US.UserID INNER JOIN categories C ON US.CategoryID = C.CategoryID WHERE US.CategoryID = 3 GROUP BY US.scoreID";
+                    $sql8 = "SELECT U.username, C.CategoryName, US.score FROM users U INNER JOIN userscore US ON U.id = US.UserID INNER JOIN categories C ON US.CategoryID = C.CategoryID WHERE US.CategoryID = 3 GROUP BY US.scoreID ORDER BY score DESC";
 
   $result = $conn->query($sql8);
     echo "<table border='1'><tr><th>Username</th><th>Category</th><th>Score</th></tr>";
@@ -130,7 +130,7 @@ echo "</table>";
                 <br /><br />
                  <h3>- Category History</h3><br />
                <?php
-                    $sql9 = "SELECT U.username, C.CategoryName, US.score FROM users U INNER JOIN userscore US ON U.id = US.UserID INNER JOIN categories C ON US.CategoryID = C.CategoryID WHERE US.CategoryID = 4 GROUP BY US.scoreID";
+                    $sql9 = "SELECT U.username, C.CategoryName, US.score FROM users U INNER JOIN userscore US ON U.id = US.UserID INNER JOIN categories C ON US.CategoryID = C.CategoryID WHERE US.CategoryID = 4 GROUP BY US.scoreID ORDER BY score DESC";
 
   $result = $conn->query($sql9);
     echo "<table border='1'><tr><th>Username</th><th>Category</th><th>Score</th></tr>";
